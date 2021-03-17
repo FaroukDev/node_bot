@@ -1,10 +1,7 @@
-require('dotenv').config();
-
 const Discord = require("discord.js");
 const config = require("./config.json");
-const { Random } = require("something-random-on-discord")
 const client = new Discord.Client();
-const random = new Random();
+
 
 
 client.on('ready', () => {
@@ -17,26 +14,26 @@ function readyDiscord(){
     console.log("hello");
 }
 
-client.on("message", function(message){
+client.on("message", function(message: { content: string; }){
     if(message.content === "!test"){
-        const channel01 = client.channels.cache.find(channel => channel.id === "821332759519690778")
-    channel01.send("hello")
+        const channel01 = client.channels.cache.find((channel: { id: string; }) => channel.id === "821332759519690778")
+        channel01.send("hello les devclouds vous voulez faire du C dieze !")
     }  
 })
 
-client.on("message", function(message){
-    if(message.content === "!hi"){
-        const channel01 = client.channels.cache.find(channel => channel.id === "821390897895047178")
-    channel01.send("hello")
-    }  
-})
+client.on("message", (message: { content: string; }) => {
+        if (message.content === "!hi") {
+            const channel01 = client.channels.cache.find((channel: { id: string; }) => channel.id === "821390897895047178");
+            channel01.send("hello les devclouds vous voulez faire du C dieze !");
+        }
+    })
 
 client.on("ready", ()=> {
     console.log("Bot is on");
 })
 
 
-client.on('message', message => {
+client.on('message', (message: { content: string; mentions: { users: { first: () => any; }; members: { first: () => any; }; }; channel: { send: (arg0: string) => any; }; }) => {
 
     let args = message.content.split(" ");
 
