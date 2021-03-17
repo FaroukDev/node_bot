@@ -2,8 +2,9 @@ require('dotenv').config();
 
 const Discord = require("discord.js");
 const config = require("./config.json");
+const { Random } = require("something-random-on-discord")
 const client = new Discord.Client();
-const randomPuppy = require("random-puppy");
+const random = new Random();
 
 
 client.on('ready', () => {
@@ -19,6 +20,13 @@ function readyDiscord(){
 client.on("message", function(message){
     if(message.content === "!test"){
         const channel01 = client.channels.cache.find(channel => channel.id === "821332759519690778")
+    channel01.send("hello")
+    }  
+})
+
+client.on("message", function(message){
+    if(message.content === "!hi"){
+        const channel01 = client.channels.cache.find(channel => channel.id === "821390897895047178")
     channel01.send("hello")
     }  
 })
@@ -41,8 +49,4 @@ client.on('message', message => {
 });
   
 
-client.on('message', async message => {
-    const currentDate = new Date();
-    message.channel.send(currentDate);
-    
-})
+
