@@ -5,19 +5,18 @@ client.on('ready', function () {
     console.log("Logged in as " + client.user.tag + "!");
 });
 client.login(config.BOT_TOKEN);
-var readyDiscord = function () {
+
+function readyDiscord() {
     console.log("hello");
-};
-exports.readyDiscord = readyDiscord;
-var message1 = function () {
+}
+function message() {
     client.on("message", function (message) {
         if (message.content === "!test") {
             var channel01 = client.channels.cache.find(function (channel) { return channel.id === "821332759519690778"; });
             channel01.send("hello les devclouds vous voulez faire du C dieze !");
         }
     });
-};
-exports.message1 = message1;
+}
 client.on("message", function (message) {
     if (message.content === "!hi") {
         var channel01 = client.channels.cache.find(function (channel) { return channel.id === "821390897895047178"; });
@@ -27,7 +26,7 @@ client.on("message", function (message) {
 client.on("ready", function () {
     console.log("Bot is on");
 });
-var nickName = function () {
+function nickName() {
     client.on('message', function (message) {
         var args = message.content.split(" ");
         if (args[0].toLowerCase() === "nick") { //command is 'changeNick <@usertag> <new nickname>'
@@ -38,5 +37,5 @@ var nickName = function () {
             user.setNickname(newNickname);
         }
     });
-};
-exports.nickName = nickName;
+}
+;
