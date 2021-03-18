@@ -3,23 +3,23 @@ const config = require("./config.json");
 const client = new Discord.Client();
 
 
-
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
   });
 client.login(config.BOT_TOKEN);
-client.on("ready", readyDiscord)
 
-function readyDiscord(){
+
+export const readyDiscord = () =>{
     console.log("hello");
 }
 
-client.on("message", function(message: { content: string; }){
+export const message1 = () => {
+    client.on("message", function(message: { content: string; }){
     if(message.content === "!test"){
         const channel01 = client.channels.cache.find((channel: { id: string; }) => channel.id === "821332759519690778")
         channel01.send("hello les devclouds vous voulez faire du C dieze !")
     }  
-})
+})}
 
 client.on("message", (message: { content: string; }) => {
         if (message.content === "!hi") {
@@ -33,7 +33,8 @@ client.on("ready", ()=> {
 })
 
 
-client.on('message', (message: { content: string; mentions: { users: { first: () => any; }; members: { first: () => any; }; }; channel: { send: (arg0: string) => any; }; }) => {
+export const nickName = () => {
+    client.on('message', (message: { content: string; mentions: { users: { first: () => any; }; members: { first: () => any; }; }; channel: { send: (arg0: string) => any; }; }) => {
 
     let args = message.content.split(" ");
 
@@ -43,7 +44,7 @@ client.on('message', (message: { content: string; mentions: { users: { first: ()
          var newNickname = args.slice(2).join(" ");
          user.setNickname(newNickname);
     }
-});
+})};
   
 
 
