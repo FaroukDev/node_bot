@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [12.x, 14.x, 15.x]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
@@ -19,7 +19,8 @@ jobs:
         run: ls -la 
       - name: Install dependencies
         run: npm install
-      # - run: npm ci
+      - name: Run npm CI
+        run: npm ci
       # - run: npm run build --if-present
       # - name: run unit test
       #   env:
