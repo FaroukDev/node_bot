@@ -1,10 +1,10 @@
 var Discord = require("discord.js");
-var config = require("./config.json");
+// var config = require("./config.json");
 var client = new Discord.Client();
 client.on('ready', function () {
     console.log("Logged in as " + client.user.tag + "!");
 });
-client.login(config.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
 var readyDiscord = function () {
     console.log("hello");
 };
