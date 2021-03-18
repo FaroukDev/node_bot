@@ -1,7 +1,7 @@
 
 var Discord = require("discord.js");
 require('dotenv').config();
-// console.log(require('dotenv').config())
+//console.log(require('dotenv').config())
 var config = require("./config.json");
 // console.log("config",config)
 
