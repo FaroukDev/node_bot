@@ -1,7 +1,7 @@
 
 var Discord = require("discord.js");
 require('dotenv').config();
-console.log(require('dotenv').config())
+// console.log(require('dotenv').config())
 var config = require("./config.json");
 // console.log("config",config)
 
@@ -18,14 +18,13 @@ client.login(process.env.BOT_TOKEN);
 var readyDiscord = function () {
     console.log("hello");
 }
-function message() {
-    client.on("message", function (message) {
+client.on("message", function (message) {
         if (message.content === "!test") {
             var channel01 = client.channels.cache.find(function (channel) { return channel.id === "821332759519690778"; });
             channel01.send("hello les devclouds vous voulez faire du C dieze !");
         }
-    });
-}
+});
+
 client.on("message", function (message) {
     if (message.content === "!hi") {
         var channel01 = client.channels.cache.find(function (channel) { return channel.id === "821390897895047178"; });
