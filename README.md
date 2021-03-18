@@ -1,4 +1,4 @@
-## Project node_bot
+## Project Node bot
 
 
 The goal of the project was to create a discord bot in node.js
