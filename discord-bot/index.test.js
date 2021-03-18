@@ -12,8 +12,6 @@ describe("hello", function() {
     });
   });
 
-
-
 describe('hello les devclouds vous voulez faire du C dieze !', function() {
     describe('message1 function', function() {
       it('should return hello les devclouds vous voulez faire du C dieze !', function() {
