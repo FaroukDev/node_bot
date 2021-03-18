@@ -8,22 +8,22 @@ client.on('ready', () => {
   });
 client.login(config.BOT_TOKEN);
 
+// function readyDiscord(){
+//     console.log("hello");
+// }
 
-export const readyDiscord = () =>{
-    console.log("hello");
-}
 
-export const message1 = () => {
-    client.on("message", function(message: { content: string; }){
+client.on("message", message => {
     if(message.content === "!test"){
-        const channel01 = client.channels.cache.find((channel: { id: string; }) => channel.id === "821332759519690778")
+        const channel01 = client.channels.cache.find((channel => channel.id === "821332759519690778"));
         channel01.send("hello les devclouds vous voulez faire du C dieze !")
     }  
-})}
+})
 
-client.on("message", (message: { content: string; }) => {
+
+client.on("message", message =>{
         if (message.content === "!hi") {
-            const channel01 = client.channels.cache.find((channel: { id: string; }) => channel.id === "821390897895047178");
+            const channel01 = client.channels.cache.find((channel => channel.id === "821390897895047178"));
             channel01.send("hello les devclouds vous voulez faire du C dieze !");
         }
     })
@@ -33,18 +33,15 @@ client.on("ready", ()=> {
 })
 
 
-export const nickName = () => {
-    client.on('message', (message: { content: string; mentions: { users: { first: () => any; }; members: { first: () => any; }; }; channel: { send: (arg0: string) => any; }; }) => {
-
+client.on('message', message => {
     let args = message.content.split(" ");
-
     if(args[0].toLowerCase() === "nick"){ //command is 'changeNick <@usertag> <new nickname>'
-        if(!message.mentions.users.first()) return message.channel.send("You didn't specify a user!");
-         const user = message.mentions.members.first();
-         var newNickname = args.slice(2).join(" ");
-         user.setNickname(newNickname);
+    if(!message.mentions.users.first()) return message.channel.send("You didn't specify a user!");
+    const user = message.mentions.members.first();
+    var newNickname = args.slice(2).join(" ");
+    user.setNickname(newNickname);
     }
-})};
+});
   
 
 

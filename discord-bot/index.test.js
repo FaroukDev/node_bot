@@ -1,11 +1,11 @@
 const readyDiscord = require('./index')
-const message1 = require('./index')
+const message = require('./index')
 const nickName = require('./index')
 const assert = require('assert').strict;
 
 
-describe('Hello', function() {
-    describe('readyDiscord', function() {
+describe("hello", function() {
+    describe('readyDiscor', function() {
       it('should return hello', function() {
         assert.equal("hello", "hello");
       });
