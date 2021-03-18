@@ -1,4 +1,4 @@
-### Project node_bot
+## Project node_bot
 
 
 The goal of the project was to create a discord bot in node.js
@@ -17,7 +17,7 @@ The goal of the project was to create a discord bot in node.js
 1. Mocha
 
 
-## How to used it
+### How to used it
 1. Clone this project `git clone https://github.com/FaroukDev/node_bot.git`
 2. Move to the cloned directory `cd discord-bot`
 3. Run `node index.js or node index.ts`
