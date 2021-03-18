@@ -1,10 +1,17 @@
+
 var Discord = require("discord.js");
-// var config = require("./config.json");
+require('dotenv').config();
+// console.log(require('dotenv').config())
+var config = require("./config.json");
+// console.log("config",config)
 var client = new Discord.Client();
+
 client.on('ready', function () {
     console.log("Logged in as " + client.user.tag + "!");
 });
+// client.login(config.BOT_TOKEN);
 client.login(process.env.BOT_TOKEN);
+// console.log("processenv",process.env.BOT_TOKEN);
 var readyDiscord = function () {
     console.log("hello");
 };
