@@ -1,1 +1,37 @@
-{"dependencies":{"awesome-typescript-loader":"^5.2.1","discord.js":"^12.5.1","dotenv":"^8.2.0","install":"^0.13.0","mocha":"^8.3.2","random-puppy":"^1.1.0","something-random-on-discord":"^0.0.2","source-map-loader":"^2.0.1","ts-mocha":"^8.0.0","winston":"^3.3.3"},"name":"bot","description":"","version":"1.0.0","main":"index.js","scripts":{"test":"mocha ./discord-bot/index.test.ts"},"repository":{"type":"git","url":"git+https://github.com/FaroukDev/node_bot.git"},"author":"","license":"ISC","bugs":{"url":"https://github.com/FaroukDev/node_bot/issues"},"homepage":"https://github.com/FaroukDev/node_bot#readme","devDependencies":{"@types/mocha":"^8.2.1","@types/node":"^14.14.35"}}Â
+{
+    "dependencies": {
+        "awesome-typescript-loader": "^5.2.1",
+        "chai": "^4.3.4",
+        "discord.js": "^12.5.1",
+        "dotenv": "^8.2.0",
+        "install": "^0.13.0",
+        "mocha": "^8.3.2",
+        "random-puppy": "^1.1.0",
+        "rewire": "^5.0.0",
+        "something-random-on-discord": "^0.0.2",
+        "source-map-loader": "^2.0.1",
+        "ts-mocha": "^8.0.0",
+        "winston": "^3.3.3"
+    },
+    "name": "bot",
+    "description": "",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha ./discord-bot/index.test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FaroukDev/node_bot.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/FaroukDev/node_bot/issues"
+    },
+    "homepage": "https://github.com/FaroukDev/node_bot#readme",
+    "devDependencies": {
+        "@types/mocha": "^8.2.1",
+        "@types/node": "^14.14.35"
+    }
+}
