@@ -21,8 +21,6 @@ jobs:
         run: npm install
       - name: Run npm CI
         run: npm ci
-      - name: run npm build if present
-        run: npm run build --if-present
       - name: run unit test
         env:
           TOKENBOT: ${{ secrets.TOKENBOT }}
