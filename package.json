@@ -17,7 +17,8 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test": "mocha ./discord-bot/index.test.js"
+        "test": "mocha ./discord-bot/index.test.js",
+        "start": "node ./discord-bot/index.js"
     },
     "repository": {
         "type": "git",
