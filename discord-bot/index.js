@@ -5,6 +5,7 @@ require('dotenv').config();
 var config = require("./config.json");
 // console.log("config",config)
 
+
 var client = new Discord.Client();
 
 client.on('ready', function () {
