@@ -22,4 +22,4 @@ The goal of the project was to create a discord bot in node.js
 2. Move to the cloned directory `cd discord-bot`
 3. Run `node index.js or node index.ts`
 4. Run test `npm run test in same directory`
-5. Access to the website from your browser with ``
+
